@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Vue 範列</title>
+  <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+  <div id="app">
+    <h1>{{ greeting }}</h1>
+    <ul>
+
+      <li>
+        測試超連接 1
+        <a :href="docsURL" target="_blank">\{{ humanizeURL(docsURL) }}</a>
+      </li>
+
+      <li>
+        測試超連接   2
+        <a :href="discordURL" target="_blank">the Discord chat</a>
+      </li>
+      <li>
+        測試超連接    3
+        <a :href="forumURL" target="_blank">the forum</a>
+      </li>
+    </ul>
+  </div>
+
+
+  <script>
+    var app = new Vue({
+      el: '#app',
+      data: {
+        greeting: 'Test 超連接',
+        docsURL: 'http://guide/',
+        discordURL: 'https://chatorg',
+        forumURL: 'http://forumorg'
+      },
+      methods: {
+        humanizeURL: function (url) {
+          return url
+            .replace(/^https?:\/\//, '')
+            .replace(/\/$/, '')
+        }
+      }
+    })
+  </script>
+
+
+
+    </body>
+</html>

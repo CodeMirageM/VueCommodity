@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Demo 商品列表範列</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.1/vue.min.js"></script>
+</head>
+<body>
+<div id="app">
+        <div class="container">
+            <div class="itemheader">
+                <div class="itemdetail">商品</div>
+                <div class="price">單價</div>
+                <div class="count">數量</div>
+                <div class="amount">總計</div>
+                <div class="operate">操作</div>
+            </div>
+            <div class="item_container" v-for="(item, index) in itemList" :key="item.id" >
+                    <div class="itemheader itembody">
+                            <div class="itemdetail">
+                                <img v-bind:src="item.imgUrl" alt="">
+                                <div class="name">{{item.itemName}}</div>
+                            </div>
+
+                            <div class="price"><span>$</span>{{item.price}}</div>
+                            <div class="count">
+                                <button @click="itemDataSub(item)">-</button>
+                                {{item.count}}
+                                <button @click="itemDataPlus(item)">+</button>
+                            </div>
+                            <div class="amount">{{item.price * item.count}}</div>
+                            <div class="operate">
+                                <button @click="itemDatadelete(index)">刪除</button>
+                            </div>
+                    </div>
+            </div>
+
+
+        </div>
+    </div>
+<script src="main.js"></script>
+
+    </body>
+</html>

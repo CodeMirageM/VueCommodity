@@ -1,0 +1,36 @@
+body{
+    background-color: rgba(0, 0, 0,.2);
+}
+.itemheader{
+    display: flex;
+    width: 1000px;
+    margin: 0 auto;
+    height: 30px;
+    background-color: #fff;
+    border-radius: 3px;
+    padding-left: 10px;
+}
+.itemheader div{
+    width: 98%;
+    color: #888;
+    line-height: 30px;
+}
+.itemheader .itemdetail{
+    width: 50%;
+}
+.itembody{
+    margin-top: 10px;
+    height: 100px;
+    align-items: center;
+}
+.itemdetail img{
+    width: 80px;
+    height: 80px;
+    border-radius: 3px;
+    /* margin-top: 10px; */
+    float: left;
+}
+.itemdetail .name{
+    margin-left: 100px;
+    margin-top: 20px;
+}
